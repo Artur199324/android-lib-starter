@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data-extraction-rules>
-    <cloud-backup>
-        <!-- Включение данных для резервного копирования в облако -->
-        <include domain="file" path="my_files/" />
-        <include domain="database" path="user_data.db" />
-        <include domain="sharedpref" path="user_prefs.xml" />
-        <!-- Исключение данных из резервного копирования в облако -->
-        <exclude domain="file" path="cache/" />
-        <exclude domain="file" path="temp/" />
-    </cloud-backup>
-
-    <device-transfer>
-        <!-- Включение данных для переноса на другое устройство -->
-        <include domain="file" path="my_files/" />
-        <include domain="database" path="user_data.db" />
-        <include domain="sharedpref" path="user_prefs.xml" />
-        <!-- Исключение данных из переноса на другое устройство -->
-        <exclude domain="file" path="cache/" />
-        <exclude domain="file" path="temp/" />
-    </device-transfer>
+    <include domain="sharedpref" path="."/>
+    <exclude domain="sharedpref" path="exclude_this_file.xml"/>
+    <include domain="database" path="."/>
+    <exclude domain="database" path="exclude_this_db.db"/>
 </data-extraction-rules>
